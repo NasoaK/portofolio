@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Stint+Ultra+Condensed&display=swap');
+
+/* TODO Container for gsap greenSocks */
+/* .section{
+width: 100vw;
+height: 100vh;
+align-items: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+position: relative;
+} */
+
+h3{
+    font-family: 'Dosis', sans-serif;
+    font-size: 70px;
+}
+
+/* Projects Section */
+
+.section{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2;
+    border-top: 1px solid white;
+    padding: 20px;
+    position: relative;
+    
+}

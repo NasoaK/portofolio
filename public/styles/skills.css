@@ -1,0 +1,28 @@
+.cv{
+
+    }
+    
+    
+    #skills-list{
+        display: flex;
+        padding:50px 100px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      
+    }
+    
+    
+    
+    .skill{
+        margin: 30px;
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+        font-weight: bold;
+        filter: invert(1);
+    }
+    
+    .skill img{
+        
+    }
+    
