@@ -21,14 +21,14 @@ h3{
 
 .section{
     width:100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    z-index: 2;
     border-top: 1px solid white;
-    padding: 20px;
     position: relative;
+    
+ /*  z-index: 2; */
     
 }

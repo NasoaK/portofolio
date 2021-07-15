@@ -1,0 +1,146 @@
+
+nav{
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: black;
+    transition: 0.3s;
+    margin-top: -100%;
+  }
+  
+  
+
+  /* TODO Button  + animation */
+  .burger-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position:fixed;
+    width: 50px;
+    height: 50px;
+    top: 5px;
+    background-color: black;
+    border: 1px solid #97fdcc;
+    border-radius: 50%;
+    z-index: 100;
+    transition: 0.7s;
+    
+  }
+  
+  .burger-btn div{
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    color: white;
+    position: absolute;
+    transition: 0.2s;
+  }
+  
+  .burger-btn div:first-child{
+  margin-top: -5px;
+  }
+  
+  .burger-btn div:last-child{
+    margin-top: 5px;
+  }
+  
+  .burger-btn:hover div{
+    background-color: black;
+  }
+  
+  .burger-btn:hover{
+    background-color: #97fdcc;
+  }
+  
+  
+  
+  /* TODO menu content */
+  .menu-list{
+    height: 50vh;
+    width: 50vw;
+    transition: 0.5s;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    -webkit-box-shadow: inset 0px 0px 0px 2px #000000; 
+    box-shadow: inset 0px 0px 0px 2px #000000;
+
+  }
+  
+  .open-menu{
+    margin-top: 0;
+    bottom: 0;
+    border: 1px solid #97fdcc;
+    border-top: 2px solid #97fdcc;
+    
+  }
+  
+  .menu-list li{
+      width: 50%;
+      height: 50%;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .menu-list li:hover{
+      text-transform: uppercase;
+  }
+
+  .menu-list li:nth-child(1){
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+.menu-list li:nth-child(2){
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+}
+.menu-list li:nth-child(4){
+    border-left: 1px solid;
+    border-top: 1px solid;
+}
+.menu-list li:nth-child(3){
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
+
+
+    .nav-link {
+      width: 100%;
+      min-height: 100%;
+      cursor: pointer;
+      position: absolute;
+      display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+  }
+
+
+  /* nav header */
+
+  #lang{
+    margin-top: 20px;
+      height : 20px;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      margin-left: 150px;
+      cursor: pointer;
+  }
+
+  .lang-box{
+      transition: 1s;
+  }
+
+  #lang:hover .lang-box{
+    margin-top: -20px;
+  }

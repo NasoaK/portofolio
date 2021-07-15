@@ -54,52 +54,69 @@ const projects = [
         link: "",
         origine: "codingJobs",
         done: false
-    }
-    
-    ];
+    }];
     
 const container = document.querySelector('.card-container');
 const projectMock = document.querySelector('.card');
     
 for (const project of projects){
-
-       
-const project_card = projectMock.cloneNode(true);
-project_card.querySelector('img').src = project.image;
-project_card.style.overFlow = "hidden";
-project_card.querySelector('.card-title').textContent = project.name;
-project_card.querySelector('.card-text').textContent = project.about;
-project_card.querySelector('.card-techno').textContent = project.techno;
-container.appendChild(project_card);
+    const project_card = projectMock.cloneNode(true);
+    project_card.querySelector('img').src = project.image;
+    project_card.style.overFlow = "hidden";
+    project_card.querySelector('.card-title').textContent = project.name;
+    project_card.querySelector('.card-text').textContent = project.about;
+    project_card.querySelector('.card-techno').textContent = project.techno;
+    container.appendChild(project_card);
 }
     
 projectMock.remove(); 
     
 //glider carousel
-
 new Glider(document.querySelector('.glider'), {
-    slidesToShow: 3,
+    // Mobile-first defaults
+    slidesToShow: 1,
     slidesToScroll: 1,
-    draggable: true,
+    scrollLock: true,
+    itemWidth: 100,
     dots: '.dots',
     arrows: {
-    prev: '.glider-prev',
-    next: '.glider-next'
-    }
-});
+      prev: '.glider-prev',
+      next: '.glider-next'
+    },
+    responsive: [
+      {
+        // screens greater than >= 750px
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 'auto',
+          itemWidth: 150,
+          duration: 0.25
+        }
+      },{
+        // screens greater than >= 1200px
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          itemWidth: 150,
+          duration: 0.25
+        }
+      }
+    ]
+  });
     
-    
- // TODO Vanilla tilt effect on card
-    const is_chrome = true;
+ // TODO Vanilla tilt effect on card only on chrome or chrome's like
+let is_chrome = true
     
     if (navigator.userAgent.indexOf("Chrome") !== -1){
-        console.log('chrome')
+       // console.log('chrome');
+        is_chrome = true;
+
     }else{
-        console.log('safari');
+        //console.log('safari');
+        is_chrome = false;
     };
-    
-    console.log('bug');
-    
     
     VanillaTilt.init(document.querySelectorAll(".card"), {
             max: 25,
@@ -108,10 +125,5 @@ new Glider(document.querySelector('.glider'), {
             "max-glare": 1,
             scale: 1.2
         });
-    
-    
-        console.log('bug');
-    
-console.log(document.documentElement.clientHeight);
 
 

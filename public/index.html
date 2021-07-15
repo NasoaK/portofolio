@@ -8,22 +8,22 @@
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="librairiesJs/Glider.js-master/glider.css">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/section.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/about.css">
-    <link rel="stylesheet" href="styles/section.css">
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/skills.css">
+    <link rel="stylesheet" href="styles/project.css">
     <link rel="stylesheet" href="styles/contact.css">
 
     <style>
     #particles-js{ 
-        position:absolute;
+        position:fixed;
         z-index: -1;
         width: 100vw;
-        height: 500vh; 
+        height: 100vh; 
         top: 0;
-        background-color: #000000; 
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
@@ -32,21 +32,42 @@
       
 </style>
 
-</head>
-<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<!-- TODO Test email.js -->
 
+
+<!-- !! End email.js -->
+
+
+</head>
 <body>
-    <header >
+    <nav> 
+        <button class="burger-btn"> <div></div> <div></div></button>
+
+        <div id="lang"> 
+            <div class="lang-box">
+                <p>Francais</p>
+                <p>English</p>
+            </div>
+           
+        </div>
+
+    <ul class="menu-list">
+        <li><a href="#about" class="nav-link"> <h3>A propos</h3></a></li>
+        <li><a href="#skills" class="nav-link">Competence</a> </li>
+        <li><a href="#project" class="nav-link">Projets</a> </li>
+        <li><a href="#contact" class="nav-link">Entrez en contact </a></li>
+    </ul>
+  
+
+    </nav>
+    <header id="intro-box"  >
     
-        <div id="intro-box">
             <h2>Mikael Kombia</h2>
             <h1><span id="app"></span></h1>
             <h2> Portofolio</h2>
-            <button id="enter-btn">enter</button>
-        </div>
+            
         <a href="#about" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </header>
-    <!-- particle.js Container -->
 
     <div class="section" id="about">
 
@@ -54,28 +75,30 @@
 
             <div class="img-about">
                 <div class="text-about">
-                    <p>
-                        Hi i'm Mike. Nice to meet you,
+                    <p>Salut je suis Mike. Ravi de vous rencontrer,</p>
                         
+                    <p>
                         Aprés avoir demarré un cursus universitaire en comptabilité, 
                         j'ai pris gout a l'effort des métiers manuels, pendant un job étudiant dans le btp
                         pas très motivé par les metiers de la compatbilité j'ai arréte mes études et travaillé dans divers domaines, sans y trouver ma voie...
-                        
-                        
+                     </p>
+                            
+                    <p>
                         Fin 2020 grace a l'adem j'ai eu l'opportunité une formation de web developper qui m'as tout de suite plu, 
                         ceci dis j'ai aussi compris que cette nouvelle compétence ne suifissait pas pour trouver un emploi, 
+                     </p>
+                     <p>
+                         Je suis donc de retour pour me présenter en tant que développeur web junior toujours en cours avec un réel intérêt pour tous les domaines de l'informatique
+                     </p>
                         
-                        ceci dis j'ai aussi compris que cette nouvelle compétence ne suifissait pas pour trouver un emploi, 
-                        So i'm back to present my self as a junior web developper still in progess with a real interest in all scope of IT </p>
-                        
-                    </div>
+                </div>
             </div>
-            <a href="#cv" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
+            <a href="#skills" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
         </div>
 
      <!-- SKILL SECTION -->
 
-    <div class="section cv" id="cv">
+    <div class="section cv" id="skills">
         
         <div>
 
@@ -132,53 +155,56 @@
         <li> <a href=""><img src="assets/social-media/icons8-linkedin-24.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
     </ul>
 
-        <form method="POST" action="" id="contact-form">
+    <form method="POST" action="" id="contact-form">
 
-            <div class="form-info">
-                    <input type="text" id="name" name="name" placeholder="Full name">
-                    <input type="email" name="" id="email" placeholder="Email">
-                    <input type="text" id="subject" placeholder="subject">
-            </div>
+        <div class="form-info">
+                <input type="text" id="name" name="name" placeholder="Full name">
+                <input type="email" name="" id="email" placeholder="Email">
+                <input type="text" id="subject" placeholder="subject">
+        </div>
 
-            <textarea name="message" id="form-message" cols="auto" rows="10" placeholder="Message"></textarea>
+        <textarea name="message" id="form-message" cols="auto" rows="10" placeholder="Message"></textarea>
 
-            <input type="checkbox" id="check"> <p>Click the check box to receive my cv on your email <address></address></p>
+        <input type="checkbox" id="check"> <p>Click the check box to receive my cv on your email <address></address></p>
 
 
-            <button id="form-btn" type="submit" [disabled]="!form.form.valid">
-                Send
-            </button>
-        </form>
-        <a href="#intro-box" class="arrow-down"><i class="fas fa-chevron-up"></i></a>
+        <button id="form-btn" type="submit" [disabled]="!form.form.valid">
+            Send
+        </button>
+    </form>
+    <a href="#intro-box" class="arrow-down"><i class="fas fa-chevron-up"></i></a>
     </div>
 
     <!-- particles dom-element-->
     <div id="particles-js"></div> 
    
-<!-- librairies js-->
-<script type="text/javascript" src="vanilla-tilt.js"></script>
-<script src="librairiesJs/Glider.js-master/glider.js"></script>
 
-<!-- mail script -->
-<script src="js/app.js"></script>
-
-<!-- properties files  -->
-<script src="script/project.js"></script>
-<script src="script/skills.js"></script>
-<!-- Typewritter js -->
-<script src="script/typewritter.js" ></script>
-
-<!-- particle.js CDN-->
+    <!--TODO particle.js CDN-->
+<script type="text/javascript" src="particles.js-master/particles.js"></script>
+<!-- !! particle.js old way with cdn -->
 <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
- <script>
-particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#97fdcc"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.4890406785639845,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3.945738208161363,"random":true,"anim":{"enable":false,"speed":2.4362316369040355,"size_min":0,"sync":false}},"line_linked":{"enable":true,"distance":224.4776885211732,"color":"#7acaa4","opacity":0.3286994724774322,"width":0.9620472365193136},"move":{"enable":true,"speed":1.603412060865523,"direction":"top","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":1683.5826639087988,"rotateY":2244.776885211732}}},"interactivity":{"detect_on":"window","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+ <script id="particle">
+particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#97fdcc"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.4890406785639845,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3.945738208161363,"random":true,"anim":{"enable":false,"speed":2.4362316369040355,"size_min":0,"sync":false}},"line_linked":{"enable":true,"distance":224.4776885211732,"color":"#7acaa4","opacity":0.3286994724774322,"width":0.9620472365193136},"move":{"enable":true,"speed":1.603412060865523,"direction":"top","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":1683.5826639087988,"rotateY":2244.776885211732}}},"interactivity":{"detect_on":"window","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":50,"size":10,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":70,"duration":0.5},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
  </script>
-
+ <!--? Color particle  -->
 <!--  <script>
     particlesJS("particles-js", {"particles":{"number":{"value":10,"density":{"enable":true,"value_area":950}},"color":{"value":["#3CBDF9","#2D6451","#63568B","#78F1C4","#02070D"]},"shape":{"type":["circle","edge"],"stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":300,"height":300}},"opacity":{"value":1,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":40,"random":true,"anim":{"enable":false,"speed":2.4362316369040355,"size_min":0,"sync":false}},"line_linked":{"enable":false,"distance":224.4776885211732,"color":"#7acaa4","opacity":0.3286994724774322,"width":0.9620472365193136},"move":{"enable":true,"speed":1.603412060865523,"direction":"top","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":1683.5826639087988,"rotateY":2244.776885211732}}},"interactivity":{"detect_on":"window","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
      </script> -->
 
-<script src="script/script.js"></script>
+<!-- TODO librairies js-->
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+<script src="librairiesJs/Glider.js-master/glider.js"></script>
+<script type="module" src="script/typewritter.js" ></script>
+<!-- Nodemailer mail script -->
+<!-- <script src="js/app.js"></script> -->
+
+<!-- TODO properties files  -->
+<script type="module" src="script/script.mjs"></script>
+<script type="module" src="script/project.js"></script>
+<script id="removeTest" src="script/skills.js"></script>
+<script type="module" src="script/about.js"></script>
+
+
 </body>
 </html>

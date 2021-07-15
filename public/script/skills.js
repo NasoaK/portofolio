@@ -24,13 +24,3 @@ const skillMock = document.querySelector('.skill');
  }
    
  skillMock.remove();
- 
-
-/*  const skill_html = document.createElement('li').textContent = skill.name;
-     */
-    
-/* skills.forEach(skill =>  skills_list.appendChild = document.createElement('li').textContent = skill.name);
-     */
-/* 
-function insertSkills(skill){
-} */

@@ -4,8 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-
     background-repeat: no-repeat;
     object-fit: cover;
 }
@@ -14,25 +12,31 @@
     width:50% ;
     height: 120%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     border: 1px solid grey;
     border-radius: 20px;
     box-shadow : 20px 20px 50px rgba(0,0,0,0.5);
     border-top: 2px solid rgba(255,255,255,0.5);
     border-left:  2px solid rgba(255,255,255,0.5);
     backdrop-filter: blur(5px);
-    align-self: right;
+    padding: 50px;
+}
+
+.text-about p {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .img-about{
     height: 50vh;
     width: 100vw;
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(202,208,209,1) 100%);
+    background: linear-gradient(90deg, rgba(202,208,209,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-image: url('/release1/assets/images/good/pexels-djordje-petrovic-2102413.jpg');
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
