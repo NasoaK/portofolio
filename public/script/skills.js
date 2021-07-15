@@ -1,14 +1,14 @@
 const skills = [
-    {name:"HTML 5", img:"assets/techno-icon/icons8-html-5-100.png"},
-    {name:"CSS", img:"assets/techno-icon/icons8-css3-100.png"},
-    {name:"Javascript", img:"assets/techno-icon/icons8-logo-javascript-100.png"},
-    {name:"Angular", img:"assets/techno-icon/icons8-angularjs-100.png"},
-    {name:"Jquery", img:"assets/techno-icon/icons8-jquery-100.png"},
-    {name:"php", img:"assets/techno-icon/icons8-logo-php-100.png"},
-    {name:"responsive", img:"assets/techno-icon/icons8-requêtes-médias-100.png"},
-    {name:"figma", img:"assets/techno-icon/icons8-figma-100.png"},
-    {name:"mySQL", img:"assets/techno-icon/icons8-logo-de-mysql-100.png"},
-    {name:"laravel", img:"assets/techno-icon/icons8-laravel-100.png"}
+    {name:"HTML 5", img:"assets/techno-icon/html.png"},
+    {name:"CSS", img:"assets/techno-icon/css3.png"},
+    {name:"Javascript", img:"assets/techno-icon/js.png"},
+    {name:"Angular", img:"assets/techno-icon/angular.png"},
+    {name:"Jquery", img:"assets/techno-icon/jquery.png"},
+    {name:"php", img:"assets/techno-icon/php.png"},
+    {name:"responsive", img:"assets/techno-icon/responsive.png"},
+    {name:"figma", img:"assets/techno-icon/figma.png"},
+    {name:"mySQL", img:"assets/techno-icon/mysql.png"},
+    {name:"laravel", img:"assets/techno-icon/laravel.png"}
 
 ];
 

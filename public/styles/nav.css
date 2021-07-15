@@ -87,7 +87,6 @@ nav{
       width: 50%;
       height: 50%;
       position: relative;
-      overflow: hidden;
       transition: 2s;
       background-color: #000000;
   }
@@ -95,10 +94,43 @@ nav{
   /* Menu Link animation */
   .menu-list li:hover{
       text-transform: uppercase;
-      background-color: #97fdcc;
+ /*      background-color: #97fdcc; */
       transition: 1s;
   }
  
+
+
+  /* TODO animation hover nav link */
+
+
+  .menu-list li h3{
+    z-index: 11;
+  }
+  .menu-list li img{
+    position: absolute;
+    height: 50vh;
+    width: 50vw;
+    opacity: 0;
+    transition: 2.5s;
+    object-fit: cover;
+  }  
+
+.img-nav1{ bottom: 0;right: 0;}
+.img-nav2{ bottom: 0;left: 0;}
+.img-nav3{ top: 0;right: 0;}
+.img-nav4{ top: 0;left: 0;}
+
+
+  .nav-link:hover img{
+    opacity: 0.5;
+    transition: 1s;
+    filter: hue-rotate(90deg);
+    }
+
+
+
+
+  /* !! END animation hover nav link  */
   .menu-list li:nth-child(1){
     border-right: 1px solid;
     border-bottom: 1px solid;
