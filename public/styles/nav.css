@@ -73,7 +73,6 @@ nav{
     padding: 0;
     -webkit-box-shadow: inset 0px 0px 0px 2px #000000; 
     box-shadow: inset 0px 0px 0px 2px #000000;
-
   }
   
   .open-menu{
@@ -89,12 +88,17 @@ nav{
       height: 50%;
       position: relative;
       overflow: hidden;
+      transition: 2s;
+      background-color: #000000;
   }
 
+  /* Menu Link animation */
   .menu-list li:hover{
       text-transform: uppercase;
+      background-color: #97fdcc;
+      transition: 1s;
   }
-
+ 
   .menu-list li:nth-child(1){
     border-right: 1px solid;
     border-bottom: 1px solid;
