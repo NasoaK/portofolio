@@ -118,12 +118,25 @@ let is_chrome = true
         is_chrome = false;
     };
     
-    VanillaTilt.init(document.querySelectorAll(".card"), {
-            max: 25,
-            speed: 400,
-            glare: is_chrome,
-            "max-glare": 1,
-            scale: 1.2
-        });
+
+    // TODO disable Tilt on smartphone
+
+    function tilt_effect(){
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+        glare: is_chrome,
+        "max-glare": 1,
+        scale: 1.2
+      });
+    }
+    
+    
+
+      if (window.matchMedia("(min-width: 700px)").matches) { // If media query matches
+        tilt_effect();
+      } 
+    
 
 
+    
