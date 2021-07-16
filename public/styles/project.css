@@ -181,6 +181,6 @@ opacity: 1;
 @media(max-width:600px){
   .card{
     width: 100%;
-    margin: 50px;
+    margin: 25px;
   }
 }

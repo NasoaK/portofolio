@@ -108,3 +108,8 @@ h2{
 
 
 
+@media (min-width:700px ){
+  h1{
+    font-size : 7vw;
+  }
+}
