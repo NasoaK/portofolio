@@ -93,7 +93,6 @@ nav{
 
   /* Menu Link animation */
   .menu-list li:hover{
-      text-transform: uppercase;
  /*      background-color: #97fdcc; */
       transition: 1s;
   }

@@ -44,12 +44,23 @@ const typewriter = new Typewriter(app, {
             burger_btn.querySelectorAll('div')[1].style.transform= 'rotate(90deg)';
             burger_btn.querySelectorAll('div')[0].style.marginTop= '0px';
             burger_btn.querySelectorAll('div')[1].style.marginTop= '0px';
+            burger_btn.addEventListener('mouseover',()=>{ burger_btn.style.transform = 'rotate(45deg)'});
+            burger_btn.addEventListener('mouseleave',()=>{ burger_btn.style.transform = 'rotate(0deg)'});
+  
             disableScroll();
         }else{
             menu.classList.remove('open-menu');
             burger_btn.querySelectorAll('div')[1].style.transform = '';
             burger_btn.querySelectorAll('div')[0].style.marginTop= '-5px';
             burger_btn.querySelectorAll('div')[1].style.marginTop= '5px'; 
+            burger_btn.style.transform = 'rotate(0deg)';
+            burger_btn.addEventListener('mouseover',()=>{ 
+                burger_btn.style.transform = 'rotate(0deg)';
+                    burger_btn.addEventListener('mouseleave',()=>{ 
+                        burger_btn.style.transform = 'rotate(0deg)';
+                    });
+            });
+        
             enableScroll();
         }
     }
