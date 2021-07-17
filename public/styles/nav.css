@@ -168,7 +168,7 @@ nav{
       top: 0;
       margin-left: 150px;
       cursor: pointer;
-      z-index: 100;  
+      z-index: 1000;  
     }
 
   .lang-box{

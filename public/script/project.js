@@ -1,8 +1,10 @@
+import {englishText} from './script.mjs';
 const projects = [
     {
         name : "Loopstudio",
         techno : "js",
         about: "build out, landing page and get it looking as close to the design as possible.",
+        about2:"Creation d'un site static pour une entreprise de réalité virtuelle ",
         image : "assets/images/projects/loopstudio.jpg",
         link : "https://stupefied-ritchie-04abce.netlify.app",
         origine : 'frontendMentor',
@@ -13,6 +15,7 @@ const projects = [
         name : "Crowdfund",
         techno : "angular",
         about : "Frontend Mentor challenge, build product page for crowndfunding website and get it looking as close to the design as possible.",
+        about2: " Creation de la page produits d'un site de crownfunding",
         image : "assets/images/projects/crowdfund.jpg",
         link : "https://crownfund-mk-ang.netlify.app",
         origine : 'frontendMentor',
@@ -34,6 +37,7 @@ const projects = [
         name: "LetzGetJob",
         techno : "laravel",
         about: "Coding Jobz, final project mise en relation professionel particulier",
+        about2: " Project final de la formation Coding jobs, site web de mise en relation professionnel particulier dans les métiers manuels",
         image : "https://media-exp1.licdn.com/dms/image/C4D1BAQF8YuxGvAgqZw/company-background_10000/0/1594963208917?e=2159024400&v=beta&t=754ZegPvr7OdCeljpaSpRrCO5OVEeJrGZtlzSccbpvc",
         link : "",
         done: true
@@ -58,14 +62,18 @@ const projects = [
     
 const container = document.querySelector('.card-container');
 const projectMock = document.querySelector('.card');
-    
 for (const project of projects){
     const project_card = projectMock.cloneNode(true);
     project_card.querySelector('img').src = project.image;
     project_card.style.overFlow = "hidden";
     project_card.querySelector('.card-title').textContent = project.name;
-    project_card.querySelector('.card-text').textContent = project.about;
     project_card.querySelector('.card-techno').textContent = project.techno;
+    if(englishText){
+      project_card.querySelector('.card-text').textContent = project.about;
+    }else{
+      project_card.querySelector('.card-text').textContent = project.about2;
+
+    }
     container.appendChild(project_card);
 }
     
@@ -107,7 +115,7 @@ new Glider(document.querySelector('.glider'), {
   });
     
  // TODO Vanilla tilt effect on card only on chrome or chrome's like
-let is_chrome = true
+let is_chrome = true;
     
     if (navigator.userAgent.indexOf("Chrome") !== -1){
        // console.log('chrome');
@@ -135,8 +143,8 @@ let is_chrome = true
 
       if (window.matchMedia("(min-width: 700px)").matches) { // If media query matches
         tilt_effect();
+        console.log(englishText)
       } 
     
 
 
-    
