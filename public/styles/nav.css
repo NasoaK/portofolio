@@ -92,15 +92,13 @@ nav{
   }
 
   /* Menu Link animation */
-  .menu-list li:hover{
- /*      background-color: #97fdcc; */
+ /*  .menu-list li:hover{
       transition: 1s;
-  }
+  } */
  
 
 
   /* TODO animation hover nav link */
-
 
   .menu-list li h3{
     z-index: 11;
@@ -112,6 +110,7 @@ nav{
     opacity: 0;
     transition: 2.5s;
     object-fit: cover;
+    filter: hue-rotate(90deg);
   }  
 
 .img-nav1{ bottom: 0;right: 0;}
@@ -123,11 +122,10 @@ nav{
   .nav-link:hover img{
     opacity: 0.5;
     transition: 1s;
-    filter: hue-rotate(90deg);
     }
 
-
-
+  
+  
 
   /* !! END animation hover nav link  */
   .menu-list li:nth-child(1){
@@ -160,7 +158,7 @@ nav{
   }
 
 
-  /* nav header */
+  /* nav lang */
 
   #lang{
     margin-top: 20px;
@@ -170,7 +168,8 @@ nav{
       top: 0;
       margin-left: 150px;
       cursor: pointer;
-  }
+      z-index: 100;  
+    }
 
   .lang-box{
       transition: 1s;
