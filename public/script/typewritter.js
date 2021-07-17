@@ -37,6 +37,7 @@ const typewriter = new Typewriter(app, {
         window.onscroll = function() {};
     }
 
+    //Open menu + burger-btn effect
     function toggleMenu(){
         open_menu = !open_menu;
         if(open_menu){
@@ -65,7 +66,7 @@ const typewriter = new Typewriter(app, {
         }
     }
   
-
+// langue function
     function langMenu(){
         if(englishText == true){
             lang_menu_p[0].innerHTML = `English`;
