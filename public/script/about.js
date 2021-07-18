@@ -30,8 +30,9 @@ toggleLang(a);
  const img_about = about_box.querySelector('.about-img');
 const txt_about = about_box.querySelector('.about-text-box');
 const div_txt = txt_about.querySelectorAll('div');
+const about_btn = txt_about.querySelector('#about-btn');
 let click_about = 0;
- txt_about.addEventListener('click',(e)=>{
+ about_btn.addEventListener('click',(e)=>{
 
     click_about ++;
     console.log('click' + click_about);
@@ -39,6 +40,7 @@ let click_about = 0;
     if(click_about%2){
         img_about.classList.add('about-img-effect');
         txt_about.classList.add('about-text-effect');
+        about_btn.querySelector('img').style.transform = "rotate(180deg)";
         if(window.matchMedia('(max-width:700px)').matches){
             div_txt[0].style.marginTop = "-75%";
         }
@@ -47,6 +49,7 @@ let click_about = 0;
         img_about.classList.remove('about-img-effect');
         txt_about.classList.remove('about-text-effect');
         div_txt[0].style.marginTop = "0%";
+        about_btn.querySelector('img').style.transform = "rotate(0deg)";
     }
  
 

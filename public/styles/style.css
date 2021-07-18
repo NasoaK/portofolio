@@ -10,9 +10,9 @@
 }
 
 html{
-  scroll-behavior: smooth;
   width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 p ,h3{
@@ -29,6 +29,7 @@ body{
     background-color: black;
     object-fit: cover;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 #intro-box{

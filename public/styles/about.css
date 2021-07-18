@@ -4,8 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
 }
 
 .about-container{
@@ -95,6 +93,8 @@
         display: flex;
         align-items: center;
         transition: 1s;
+        left: 50%;
+       
     }
 
 
@@ -111,5 +111,25 @@
     .about-text-effect{
       right: 0%;
       top: 50%;
+    }
+
+    #about-btn{
+        position: absolute;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: white;
+        bottom: 2vh;
+        transform: translateX(-50%);
+    }
+
+    .about-caret{
+        opacity: 1;
+        font-size: large;
+        color: black;
+        display: flex;
     }
 }
