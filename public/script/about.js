@@ -41,14 +41,14 @@ let click_about = 0;
         img_about.classList.add('about-img-effect');
         txt_about.classList.add('about-text-effect');
         about_btn.querySelector('img').style.transform = "rotate(180deg)";
-        if(window.matchMedia('(max-width:700px)').matches){
-            div_txt[0].style.marginTop = "-75%";
+        if(window.matchMedia('(max-width:800px)').matches){
+            div_txt[1].style.marginTop = "-75%";
         }
         console.log('effect');
     }else{
         img_about.classList.remove('about-img-effect');
         txt_about.classList.remove('about-text-effect');
-        div_txt[0].style.marginTop = "0%";
+        div_txt[1].style.marginTop = "0%";
         about_btn.querySelector('img').style.transform = "rotate(0deg)";
     }
  
