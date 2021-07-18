@@ -1,6 +1,6 @@
 import {englishText,toggleLang} from './script.mjs';
 
-const about = document.querySelector('.text-about');
+const about = document.querySelector('.about-text-box');
 const about_text = about.querySelectorAll('p');
 englishText;
 
@@ -26,4 +26,27 @@ function a(){
 }
 
 toggleLang(a);
+ const about_box = document.querySelector('.about-container');
+ const img_about = about_box.querySelector('.about-img');
+const txt_about = about_box.querySelector('.about-text-box');
+const div_txt = txt_about.querySelectorAll('div');
+let click_about = 0;
+ txt_about.addEventListener('click',(e)=>{
+
+    click_about ++;
+    console.log('click' + click_about);
+
+    if(click_about%2){
+        img_about.classList.add('about-img-effect');
+        txt_about.classList.add('about-text-effect');
+        div_txt[0].style.marginTop = "-75%";
+        console.log('effect');
+    }else{
+        img_about.classList.remove('about-img-effect');
+        txt_about.classList.remove('about-text-effect');
+        div_txt[0].style.marginTop = "0%";
+    }
  
+
+    
+ });
