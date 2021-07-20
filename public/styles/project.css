@@ -93,7 +93,6 @@
   transition: 0.5s;
   transform-style: preserve-3d;
   perspective: 300px;
-  transform-style: preserve-3d;
 }
 
 .card:hover img{
@@ -141,7 +140,7 @@ opacity: 1;
 
 .card-btn{
   border-radius : 14px;
-  background-color: white;
+  background-color:rgba(255, 254, 254, 0.296);
   padding: 5px 30px;
   right: 20px;
   border: 0px;
@@ -149,14 +148,15 @@ opacity: 1;
   transform: translateZ(20px);
   perspective: 15px;
   margin: 20px;
-  color: rgb(2, 0, 0);
+  color: white;
 }
 
 .card-btn:hover{
-  background-color:black;
+ /*  background-color:#97fdcc;; */
+ border: 1px solid #97fdcc;
   color: white;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.3s;
 }
 
 .card-title{

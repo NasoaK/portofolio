@@ -7,6 +7,7 @@
     margin:0;
     list-style: none;
     text-decoration: none;
+
 }
 
 html{
@@ -15,11 +16,43 @@ html{
   scroll-behavior: smooth;
 }
 
-p ,h3{
-  font-family: 'Dosis', sans-serif;
+p{
   text-align: center;
 }
 
+h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #97fdcc;
+  font-size: 9vw;
+}
+
+
+h3{
+  font-size: 50px;
+  top: 0;
+  color: white;
+  position: absolute;
+  margin-bottom: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  background-color: #97fdcc3c;
+  width: 100%;
+  backdrop-filter: blur(5px);
+}
+
+
+h2{
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  font-size: 3.5vw;
+  margin-left: 5.4vw;
+  letter-spacing: 5.5vw;
+  font-weight: lighter;
+}
 
 body{
     height: 100vh;
@@ -75,37 +108,15 @@ color: #97fdcc;
 }
 
 #back{
-  
-  /* -webkit-text-stroke-color: rgb(196, 21, 231); */
   -webkit-text-stroke-color: rgb(235, 80, 243);
+}
 
-}
-h1{
-    color: rgb(0, 0, 0);
-    cursor: crosshair;
-    font-size: 9vw;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    /* text-shadow: 1px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff; */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #97fdcc;
-/*   font-family: 'Fjalla One', sans-serif; */
-/* TODO Typewritting effect */
-}
 
   .Typewriter__cursor{
     
   }
   
-h2{
-    font-family: 'Dosis', sans-serif;
-    text-transform: uppercase;
-    font-size: 3.5vw;
-    margin-left: 5.4vw;
-    letter-spacing: 5.5vw;
-    font-weight: lighter;
-}
+
 
 
 

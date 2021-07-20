@@ -85,11 +85,15 @@ button{
     border: 1px solid black;
     border-radius: 15px;
     background-color: black;
-    border: 1px solid white;
+    border: 1px solid #97fdcc;
+    transition: 0.4s;
 }
 
 #form-btn:hover{
-    background-color: white;
-    color: black;
+    background-color: #97fdcc;
     
+}
+
+#contact-form p{
+    transform: translateY(-100%);
 }
