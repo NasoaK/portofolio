@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="librairiesJs/Glider.js-master/glider.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="styles/section.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/skills.css">
@@ -75,7 +74,7 @@
         <a href="#about" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </header>
 
-    <div class="section" id="about">
+    <section id="about">
 
         <h3>About</h3>
 
@@ -112,11 +111,11 @@
 
             </div>
             <a href="#skills" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
-        </div>
+    </section>
 
      <!-- SKILL SECTION -->
 
-    <div class="section cv" id="skills">
+    <section class="cv" id="skills">
         
         <h3> My toolkit</h3>
         <div>
@@ -129,11 +128,11 @@
         </div>
             
             <a href="#project" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
-    </div>
+    </section>
 
 <!-- PROJECTS -->
 
-<div class="section" id="project">
+<section id="project">
 
         <h3> Projects</h3>
         
@@ -145,8 +144,8 @@
                     <p class="card-title">Lorem ipsum.</h3>
                         <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint tenetur qui odit beatae, quidem fugit voluptatibus, doloremque impedit similique dolore omnis, necessitatibus ipsam .</p>
                         <p class="card-techno"> Javascript html css</p>
-                        <button class="card-btn">Live</button>
-                        <button class="card-btn">Code</button>
+                        <button class="card-btn livebtn">Live</button>
+                        <button class="card-btn"><a href="" class="codebtn">Code</a></button>
                     </div>
                 </div>
             </div>
@@ -156,20 +155,20 @@
             <div role="tablist" class="dots"></div>
         </div>
         <a href="#contact" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
-    </div>
+</section>
 
         <!-- CONTACT -->
 
-      <div class="section" id="contact">
+      <section id="contact">
             
         <h3> Get in touch</h3>
 
     <!--  <p id="email-perso"> Mikael.kombia@gmail.com</p> -->
 
     <ul id="social-media">
-        <li> <a href=""><img src="assets/GitHub-Mark-Light-64px.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
-        <li> <a href=""> <img src="assets/social-media/icons8-courrier-100.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
-        <li> <a href=""><img src="assets/social-media/icons8-linkedin-24.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
+        <li> <a href="https://github.com/NasoaK"><img src="assets/GitHub-Mark-Light-64px.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
+        <li> <a href="https://www.linkedin.com/in/mikael-kombia/"><img src="assets/social-media/linkedin.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
+        <li> <a href="https://codepen.io/Nasoa"><img src="assets/social-media/codePen.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
     </ul>
 
     <form method="POST" action="" id="contact-form">
@@ -192,7 +191,7 @@
         </button>
     </form>
     <a href="#intro-box" class="arrow-down"><i class="fas fa-chevron-up"></i></a>
-    </div>
+      </section>
 
     <!-- particles dom-element-->
     <div id="particles-js"></div> 
@@ -223,7 +222,6 @@ particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enabl
 <script type="module" src="script/project.js"></script>
 <script id="removeTest" src="script/skills.js"></script>
 <script type="module" src="script/about.js"></script>
-
 
 </body>
 </html>

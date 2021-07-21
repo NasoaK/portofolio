@@ -9,11 +9,14 @@
 
 #social-media{
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .social-icon{
     width: 50px;
     height : 50px;
+    margin: 10px;
 }
 
 #contact-form{
@@ -108,4 +111,11 @@ button{
     font-size:  11px;
     padding-bottom: 3px;
     }
+
+    #social-media{
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+    }
 }
+

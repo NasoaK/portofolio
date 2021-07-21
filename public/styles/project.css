@@ -102,6 +102,7 @@ opacity: 1;
   perspective: 15px;
   margin: 20px;
   color: white;
+  z-index: 10;
 }
 
 .card-btn:hover{

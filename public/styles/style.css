@@ -82,6 +82,18 @@ body{
     overflow: hidden;
 }
 
+
+section{
+  width:100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  max-height: 100vh;
+  min-height: 100vh;
+}
+
 .rotate{
   transform: rotateY(90deg);
 }
@@ -128,5 +140,8 @@ color: #97fdcc;
 @media (max-width:700px ){
   h1{
     font-size : 7vw;
+  }
+  section{
+    height: 99vh;
   }
 }

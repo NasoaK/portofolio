@@ -7,6 +7,7 @@ const projects = [
         about2:"Creation d'un site static pour une entreprise de réalité virtuelle ",
         image : "assets/images/projects/loopstudio.jpg",
         link : "https://stupefied-ritchie-04abce.netlify.app",
+        code : 'https://github.com/NasoaK/loopstudio',
         origine : 'frontendMentor',
         done : true
     },
@@ -62,12 +63,24 @@ const projects = [
     
 const container = document.querySelector('.card-container');
 const projectMock = document.querySelector('.card');
+
+
+function openLink(e){
+  window.open(e);
+}
+
 for (const project of projects){
     const project_card = projectMock.cloneNode(true);
     project_card.querySelector('img').src = project.image;
     project_card.style.overFlow = "hidden";
     project_card.querySelector('.card-title').textContent = project.name;
     project_card.querySelector('.card-techno').textContent = project.techno;
+    /* card_btn[0].querySelector('a').href = project.link;
+ */
+  project_card.querySelector('.livebtn').addEventListener('click', (e)=>{
+  openLink(project.link)
+});
+  project_card.querySelector('.codebtn').href= project.code;
     if(englishText){
       project_card.querySelector('.card-text').textContent = project.about;
     }else{
