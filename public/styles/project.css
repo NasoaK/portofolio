@@ -33,22 +33,9 @@
 }
  */
 
- #glider-next, #glider-prev{
-  height: 50px;
-  text-align: center;
-  align-self: baseline;
-
-}
-
-.glider-track{
-  height: 100%;
-  align-items: center;
-}
-
 
 .glider{
-
-  height: 90vh;
+  height: fit-content;
   align-items: center;
   justify-content: center;
   
