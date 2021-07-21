@@ -31,7 +31,7 @@ app.post('/',(req,res)=>{
             to: req.body.email,
             subject:'Salut c\'est Mike voici mon cv ',
             text:'test',
-            html:'<div style="background-image:url(cid:mailtrap);width:50vw; height:50vh; background-position:center;object-fit:cover; align-item: center; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; padding:20px"> <h3>Salut c\'est Mikael</h3> <p>Tu voulais voir mon cv le voici</p></div>',
+            html:'<div style="background-image:url(cid:mailtrap);width:50vw; height:50vh; color: black; background-position:center;object-fit:cover; align-item: center; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; padding:20px"> <h3>Salut c\'est Mikael</h3> <p>Tu voulais voir mon cv le voici</p></div>',
             attachments: [{
                 filename: 'mailBg.jpg',
                path:"public/assets/images/motion-test.gif",
