@@ -42,26 +42,25 @@ const typewriter = new Typewriter(app, {
         open_menu = !open_menu;
         if(open_menu){
             menu.classList.add('open-menu');
-            burger_btn.querySelectorAll('div')[1].style.transform= 'rotate(90deg)';
-            burger_btn.querySelectorAll('div')[0].style.marginTop= '0px';
-            burger_btn.querySelectorAll('div')[1].style.marginTop= '0px';
-            burger_btn.addEventListener('mouseover',()=>{ burger_btn.style.transform = 'rotate(45deg)'});
-            burger_btn.addEventListener('mouseleave',()=>{ burger_btn.style.transform = 'rotate(0deg)'});
+            burger_btn.querySelectorAll('div')[2].style.transform = 'rotate(45deg)';
+            burger_btn.querySelectorAll('div')[2].style.marginTop = '0px';
+            burger_btn.querySelectorAll('div')[0].style.marginTop = '0px';
+            burger_btn.querySelectorAll('div')[0].style.transform = 'rotate(-45deg)';
+            burger_btn.querySelectorAll('div')[1].style.display = 'none';
+            burger_btn.style.transform = 'translate(50%) rotate(180deg)';
+            burger_btn.style.right = '50%';
   
             disableScroll();
         }else{
             menu.classList.remove('open-menu');
-            burger_btn.querySelectorAll('div')[1].style.transform = '';
-            burger_btn.querySelectorAll('div')[0].style.marginTop= '-5px';
-            burger_btn.querySelectorAll('div')[1].style.marginTop= '5px'; 
+            burger_btn.querySelectorAll('div')[2].style.transform = 'rotate(0deg)';
+            burger_btn.querySelectorAll('div')[2].style.marginTop = '10px';
+            burger_btn.querySelectorAll('div')[0].style.marginTop = '-10px';
+            burger_btn.querySelectorAll('div')[0].style.transform = 'rotate(0deg)';
+            burger_btn.querySelectorAll('div')[1].style.display = 'unset';
             burger_btn.style.transform = 'rotate(0deg)';
-            burger_btn.addEventListener('mouseover',()=>{ 
-                burger_btn.style.transform = 'rotate(0deg)';
-                    burger_btn.addEventListener('mouseleave',()=>{ 
-                        burger_btn.style.transform = 'rotate(0deg)';
-                    });
-            });
-        
+            burger_btn.style.transform = 'translate(0%) rotate(0deg)';
+            burger_btn.style.right = '10px';
             enableScroll();
         }
     }

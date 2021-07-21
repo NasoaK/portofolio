@@ -2,17 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Stint+Ultra+Condensed&display=swap');
 
 /* TODO Container for gsap greenSocks */
-/* .section{
-width: 100vw;
-height: 100vh;
-align-items: center;
-justify-content: center;
-display: flex;
-flex-direction: column;
-position: relative;
-} */
-
-
 
 /* Projects Section */
 
@@ -23,7 +12,6 @@ position: relative;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-top: 2px solid rgba(255, 255, 255, 0.392);
     position: relative;
     
  /*  z-index: 2; */
