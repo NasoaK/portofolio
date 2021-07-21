@@ -15,8 +15,6 @@ check.addEventListener('change',()=>{
     }
 });
 
-
-
 contactForm.addEventListener('submit', (e)=>{
     e.preventDefault();
 
@@ -26,27 +24,26 @@ contactForm.addEventListener('submit', (e)=>{
         subject: subject.value,
         message: message.value,
         sendCv: sendCv
-
-    }
+    };
 
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '/');
-    xhr.setRequestHeader('content-type', 'application/json');
+    xhr.setRequestHeader('Content-Type', 'application/json',true);
 
     xhr.onload = function(){
         console.log(xhr.responseText);
 
-        if(xhr.responseText == 'success'){
+        if(xhr.responseText === 'success'){
             alert('Email sent');
             fullName.value = '';
             email.value = '';
             subject.value = '';
             message.value = '';
+            console.log('email send');
         }else{
             alert('something went wrong !')
         }
-
     }
 
     xhr.send(JSON.stringify(formData));
-})
+});
