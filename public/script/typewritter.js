@@ -70,11 +70,13 @@ const typewriter = new Typewriter(app, {
         if(englishText == true){
             lang_menu_p[0].innerHTML = `English`;
             lang_menu_p[1].innerHTML = `Francais`;
+
         }else{
             lang_menu_p[0].innerHTML = `Francais`;
             lang_menu_p[1].innerHTML = `Anglais`;
         }
     }
+
 
     langMenu();
 
