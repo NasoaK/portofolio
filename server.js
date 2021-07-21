@@ -38,8 +38,8 @@ app.post('/',(req,res)=>{
                 cid: 'mailtrap' 
             },
             {
-                filename: 'cv.pdf',
-                path: "public/assets/images/cv.png"
+                filename: 'MikaelKombia_Resume.pdf',
+                path: "public/assets/resume.pdf"
             }]
         }
         transporter.sendMail(mailOption2, (error, info)=>{
