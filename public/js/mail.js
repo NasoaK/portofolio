@@ -3,6 +3,7 @@ const fullName = document.getElementById('name');
 const email = document.getElementById('email');
 const subject = document.getElementById('subject');
 const message = document.getElementById('form-message');
+const lazyLoader_mail = document.getElementById('lazyLoader-mail');
 let sendCv;
 //checkBox email
 const check = document.getElementById('check');
@@ -25,6 +26,7 @@ contactForm.addEventListener('submit', (e)=>{
         message: message.value,
         sendCv: sendCv
     };
+    lazyLoader_mail.style.display = "flex";
 
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '/');
@@ -40,6 +42,7 @@ contactForm.addEventListener('submit', (e)=>{
             subject.value = '';
             message.value = '';
             console.log('email send');
+            lazyLoader_mail.style.display = "none";
         }else{
             alert('something went wrong !')
         }

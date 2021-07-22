@@ -23,6 +23,26 @@ html{
 p{
   text-align: center;
 }
+/* TODO Lazy Loader */
+#lazyLoader-mail{
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity:0.8;
+  z-index: 1000;
+  background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 32%, rgba(7,7,7,0.7609418767507002) 63%, rgba(13,13,13,0.48082983193277307) 100%);
+}
+#lazyLoader-mail img{
+object-fit: cover;
+height: 50%;
+width: 50%;
+}
+
+/* TODO end lazy loader */
 
 h1{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

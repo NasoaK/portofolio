@@ -75,7 +75,6 @@ app.post('/',(req,res)=>{
             console.log('on peut envoyer le cv');
     
         };
-    
 })
 
 app.get('/',(req,res)=>{
