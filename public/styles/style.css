@@ -27,7 +27,7 @@ p{
 #lazyLoader-mail{
   width: 100vw;
   height: 100vh;
-  display:flex;
+  display:none;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -45,7 +45,7 @@ width: 50%;
 
 #modal-success{
  position: absolute;
- display: block;
+ display: none;
   width: 50%;
   height: 50%;
   opacity: 1;
