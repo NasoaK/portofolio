@@ -27,7 +27,7 @@ p{
 #lazyLoader-mail{
   width: 100vw;
   height: 100vh;
-  display:flex;
+  display:none;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -100,6 +100,9 @@ justify-content: center;
 #modal-bottom p:first-child{
   font-size:30px;
   font-weight: bolder;
+}
+#modal-bottom p:nth-child(2){
+  color: rgb(102, 102, 102);
 }
 /* TODO end lazy loader */
 
@@ -222,5 +225,29 @@ color: #97fdcc;
   }
   section{
     height: 99vh;
+  }
+
+  #lazyLoader-mail img{
+    width: 100%;
+  }
+  #modal-success{
+    width: 90%;
+    margin: 10px;
+  }
+  #modal-bottom{
+    padding: 20px;
+  }
+  #modal-top img{
+    width: 50px;
+    height: 50px;
+    filter: invert();
+  }
+  #modal-bottom p:first-child{
+    font-size:20px;
+    font-weight: bolder;
+  }
+  #modal-bottom p:nth-child(2){
+    font-size:13px;
+    font-weight: bolder;
   }
 }
