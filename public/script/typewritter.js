@@ -82,3 +82,4 @@ const typewriter = new Typewriter(app, {
 
     burger_btn.addEventListener('click',()=>{toggleMenu();})
     menu_list.addEventListener('click',()=>{toggleMenu();});
+

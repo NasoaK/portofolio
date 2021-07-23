@@ -4,6 +4,7 @@ const email = document.getElementById('email');
 const subject = document.getElementById('subject');
 const message = document.getElementById('form-message');
 const lazyLoader_mail = document.getElementById('lazyLoader-mail');
+const modal_success = document.querySelector('#modal-success');
 let sendCv;
 //checkBox email
 const check = document.getElementById('check');
@@ -14,6 +15,12 @@ check.addEventListener('change',()=>{
     }else{
         sendCv = 'true'
     }
+});
+
+modal_success.addEventListener('click',()=>{
+
+modal_success.style.display = "none";
+lazyLoader_mail.style.display = "none";
 });
 
 contactForm.addEventListener('submit', (e)=>{
@@ -36,13 +43,13 @@ contactForm.addEventListener('submit', (e)=>{
         console.log(xhr.responseText);
 
         if(xhr.responseText === 'success'){
-            alert('Email sent');
+            modal_success.style.display = "block";
             fullName.value = '';
             email.value = '';
             subject.value = '';
             message.value = '';
             console.log('email send');
-            lazyLoader_mail.style.display = "none";
+            
         }else{
             alert('something went wrong !')
         }
