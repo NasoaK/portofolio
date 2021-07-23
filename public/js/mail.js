@@ -20,6 +20,7 @@ check.addEventListener('change',()=>{
 modal_success.addEventListener('click',()=>{
 
 modal_success.style.display = "none";
+lazyLoader_mail.style.opacity = 0.8;
 lazyLoader_mail.style.display = "none";
 });
 
@@ -43,13 +44,16 @@ contactForm.addEventListener('submit', (e)=>{
         console.log(xhr.responseText);
 
         if(xhr.responseText === 'success'){
+
+            setTimeout(function(){  
+                lazyLoader_mail.style.opacity = 1;
             modal_success.style.display = "block";
             fullName.value = '';
             email.value = '';
             subject.value = '';
             message.value = '';
             console.log('email send');
-            
+            }, 2000);
         }else{
             alert('something went wrong !')
         }

@@ -27,7 +27,7 @@ p{
 #lazyLoader-mail{
   width: 100vw;
   height: 100vh;
-  display:none;
+  display:flex;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -45,12 +45,13 @@ width: 50%;
 
 #modal-success{
  position: absolute;
- display: none;
+ display: block;
   width: 50%;
   height: 50%;
+  opacity: 1;
   background-color: white;
   z-index: 1000000;
-  backdrop-filter: blur(30px);
+  backdrop-filter:white;
   border-radius: 20px;
   overflow: hidden;
 }
