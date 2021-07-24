@@ -22,10 +22,13 @@ export function isChrome(){
     };
 }
 
-const section = document.querySelector('section')
+const section = document.querySelectorAll('section');
 
+section.forEach(sec => {
+    sec.style.height = window.innerHeight + "px";
 
-    section.style.height = window.innerHeight ;
+});
+
 
 
 
