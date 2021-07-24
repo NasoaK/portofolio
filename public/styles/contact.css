@@ -7,17 +7,7 @@
     padding: 0 20px;
     }
 
-#social-media{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
 
-.social-icon{
-    width: 50px;
-    height : 50px;
-    margin: 10px;
-}
 
 #contact-form{
     display: inline;
@@ -112,10 +102,5 @@ button{
     padding-bottom: 3px;
     }
 
-    #social-media{
-        display: flex;
-        width: 50%;
-        justify-content: space-around;
-    }
 }
 

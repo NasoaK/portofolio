@@ -22,12 +22,11 @@ export function isChrome(){
     };
 }
 
-/* 
-if(isChrome() == false){
-    particle_js.remove();
-    document.body.style.backgroundImage = "url(./assets/safariBg.jpg)";
- 
-}
- */
+const section = document.querySelector('section')
+
+
+    section.style.height = window.innerHeight ;
+
+
 
 
