@@ -10,8 +10,8 @@ const menu_link = menu_list.querySelectorAll('p');
 const typewriter = new Typewriter(app, {
     loop: false
 });
-    typewriter.typeString('Junior web developper')
-    .pauseFor(1500)
+    typewriter.pauseFor(5000).typeString('Junior web developper')
+    .pauseFor(500)
     .deleteChars(14)
     .typeString('<span id="front">Frontend<span>')
     .deleteChars(8)

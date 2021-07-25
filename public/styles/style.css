@@ -24,7 +24,7 @@ p{
   text-align: center;
 }
 /* TODO Lazy Loader */
-#lazyLoader-mail{
+#lazyLoader{
   width: 100vw;
   height: 100vh;
   display:none;
@@ -37,7 +37,7 @@ p{
 background: radial-gradient(circle, rgba(0,0,0,1) 32%, rgba(7,7,7,0.7609418767507002) 63%, rgba(13,13,13,0.48082983193277307) 100%);
 backdrop-filter: blur(10px);
 }
-#lazyLoader-mail img{
+#lazyLoader img{
 object-fit: cover;
 height: 50%;
 width: 50%;
@@ -90,6 +90,7 @@ justify-content: center;
   display: flex;
   align-items: center;
   transition: 0.4s;
+  cursor: pointer;
 }
 #modal-close:hover{
   opacity: inherit;
@@ -203,12 +204,12 @@ color: #97fdcc;
 }
 
 #front{
-  -webkit-text-stroke-color: rgb(167, 233, 13);
+  -webkit-text-stroke-color: rgb(255, 178, 62);
 
 }
 
 #back{
-  -webkit-text-stroke-color: rgb(235, 80, 243);
+  -webkit-text-stroke-color: rgb(80, 151, 243);
 }
 
 
@@ -228,7 +229,7 @@ color: #97fdcc;
     height: 99vh;
   }
 
-  #lazyLoader-mail img{
+  #lazyLoader img{
     width: 100%;
   }
   #modal-success{

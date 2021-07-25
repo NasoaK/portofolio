@@ -1,6 +1,6 @@
 import {translate_about} from './about.mjs';
 import {translate_menu} from './header.mjs';
-import {translate_form} from './contact.mjs';
+import {translate_form, lazyLoader} from './contact.mjs';
 
 export var englishText = false;
 export const lang_elt = document.querySelector('#lang');
@@ -55,7 +55,13 @@ section.forEach(sec => {
     sec.style.maxHeight = "fit-content";
 });
 
+// loader wait for ressources
 
+lazyLoader.style.display = "flex";
+
+setTimeout(()=>{
+    lazyLoader.style.display = "none";
+}, 5000)
 
 
 
