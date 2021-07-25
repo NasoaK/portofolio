@@ -19,7 +19,7 @@
     }
 
     .skill p{
-        color: white
+        color: white;
         transition: 1s;
         opacity: 0;
         font-size: 20px;
