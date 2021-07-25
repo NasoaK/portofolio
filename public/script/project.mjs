@@ -1,4 +1,4 @@
-import {englishText} from './script.mjs';
+import {englishText} from './global.mjs';
 const projects = [
     {
         name : "Loopstudio",
@@ -151,12 +151,9 @@ let is_chrome = true;
         scale: 1.2
       });
     }
-    
-    
 
       if (window.matchMedia("(min-width: 700px)").matches) { // If media query matches
         tilt_effect();
-        console.log(englishText)
       } 
     
 

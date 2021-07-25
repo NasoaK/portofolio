@@ -182,7 +182,7 @@
 
       <section id="contact">
             
-        <h3> entrer en contact</h3>
+        <h3> Contact</h3>
 
     <!--  <p id="email-perso"> Mikael.kombia@gmail.com</p> -->
 
@@ -190,15 +190,15 @@
     <form method="POST" action="" id="contact-form">
 
         <div class="form-info">
-                <input type="text" id="name" name="name" placeholder="Full name" required>
-                <input type="email" name="" id="email" placeholder="Email" required>
-                <input type="text" id="subject" placeholder="subject" required>
+                <input type="text" id="name" name="name" placeholder="Nom complet" required>
+                <input type="email" name="" id="email" placeholder="Adresse email" required>
+                <input type="text" id="subject" placeholder="Sujet" required>
         </div>
 
         <textarea name="message" id="form-message" cols="auto" rows="10" placeholder="Message" required></textarea>
 
         <input type="checkbox" id="check">
-        <label for="check"><p>Want to receive my cv by email ? </p></label>        
+        <label for="check"><p>Tu veux recevoir mon cv par email ? </p></label>        
       
            
 
@@ -237,15 +237,12 @@ particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enabl
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <script type="text/javascript" src="vanilla-tilt.js"></script>
 <script src="librairiesJs/Glider.js-master/glider.js"></script>
-<script type="module" src="script/header.js" ></script>
-<!-- Nodemailer mail script -->
-<script src="js/mail.js"></script>
-
-<!-- TODO properties files  -->
-<script type="module" src="script/script.mjs"></script>
-<script type="module" src="script/project.js"></script>
+<script type="module" src="script/header.mjs" ></script>
+<script type="module" src="script/contact.mjs"></script>
+<script type="module" src="script/global.mjs"></script>
+<script type="module" src="script/project.mjs"></script>
 <script id="removeTest" src="script/skills.js"></script>
-<script type="module" src="script/about.js"></script>
+<script type="module" src="script/about.mjs"></script>
 
 </body>
 </html>

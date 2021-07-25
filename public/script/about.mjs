@@ -1,11 +1,9 @@
-import {englishText,toggleLang} from './script.mjs';
+import {englishText} from './global.mjs';
 
 const about = document.querySelector('.about-text-box');
 const about_text = about.querySelectorAll('p');
-englishText;
 
-
-function a(){
+export function translate_about(){
     if(englishText == true){
         about_text[0].textContent = "Hi i\'m Mike. Nice to meet you,";
         about_text[1].textContent = `After starting a university course in accounting,
@@ -25,7 +23,7 @@ function a(){
     }
 }
 
-toggleLang(a);
+
  const about_box = document.querySelector('.about-container');
  const img_about = about_box.querySelector('.about-img');
 const txt_about = about_box.querySelector('.about-text-box');

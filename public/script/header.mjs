@@ -1,4 +1,4 @@
-import {englishText, toggleLang, lang_elt} from './script.mjs';
+import {englishText, lang_elt} from './global.mjs';
 
 const burger_btn = document.querySelector('.burger-btn');
 const menu_list = document.querySelector('.menu-list');
@@ -67,7 +67,7 @@ const typewriter = new Typewriter(app, {
     }
   
 // langue function
-    function langMenu(){
+    export function translate_menu(){
         if(englishText == true){
             lang_menu_p[0].innerHTML = `English`;
             lang_menu_p[1].innerHTML = `Francais`;
@@ -86,9 +86,6 @@ const typewriter = new Typewriter(app, {
             menu_link[3].innerHTML = "contact";
         }
     }
-
-
-    toggleLang(langMenu);
 
     burger_btn.addEventListener('click',()=>{toggleMenu();})
     menu_list.addEventListener('click',()=>{toggleMenu();});
