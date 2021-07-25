@@ -26,7 +26,6 @@ const section = document.querySelectorAll('section');
 
 section.forEach(sec => {
     sec.style.height = window.innerHeight + "px";
-
 });
 
 
