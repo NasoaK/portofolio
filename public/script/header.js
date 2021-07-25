@@ -6,6 +6,7 @@ const menu = document.querySelector('nav');
 let open_menu = false;
 const lang_menu_p = lang_elt.querySelectorAll('p');
 const app = document.getElementById('app');
+const menu_link = menu_list.querySelectorAll('p'); 
 const typewriter = new Typewriter(app, {
     loop: false
 });
@@ -70,15 +71,24 @@ const typewriter = new Typewriter(app, {
         if(englishText == true){
             lang_menu_p[0].innerHTML = `English`;
             lang_menu_p[1].innerHTML = `Francais`;
+            menu_link[0].innerHTML = "about";
+            menu_link[1].innerHTML = "skills";
+            menu_link[2].innerHTML = "projects";
+            menu_link[3].innerHTML = "contact";
+
 
         }else{
             lang_menu_p[0].innerHTML = `Francais`;
             lang_menu_p[1].innerHTML = `Anglais`;
+            menu_link[0].innerHTML = "à propos";
+            menu_link[1].innerHTML = "competence";
+            menu_link[2].innerHTML = "projets";
+            menu_link[3].innerHTML = "contact";
         }
     }
 
 
-    langMenu();
+    toggleLang(langMenu);
 
     burger_btn.addEventListener('click',()=>{toggleMenu();})
     menu_list.addEventListener('click',()=>{toggleMenu();});
