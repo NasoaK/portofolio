@@ -1,4 +1,4 @@
-import {englishText} from './script.mjs';
+import {englishText} from './export.mjs';
 const projects = [
     {
         name : "Loopstudio",

@@ -1,4 +1,4 @@
-import {englishText,toggleLang} from './script.mjs';
+import {englishText,toggleLang} from './export.mjs';
 
 const about = document.querySelector('.about-text-box');
 const about_text = about.querySelectorAll('p');
@@ -26,6 +26,8 @@ function a(){
 }
 
 toggleLang(a);
+
+// Animation on about for mobile
  const about_box = document.querySelector('.about-container');
  const img_about = about_box.querySelector('.about-img');
 const txt_about = about_box.querySelector('.about-text-box');

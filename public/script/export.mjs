@@ -28,7 +28,22 @@ section.forEach(sec => {
     sec.style.height = window.innerHeight + "px";
 });
 
+// Typewritter.js
 
+const typewriter = new Typewriter(app, {
+    loop: false
+});
+    typewriter.typeString('Junior web developper')
+    .pauseFor(1500)
+    .deleteChars(14)
+    .typeString('<span id="front">Frontend<span>')
+    .deleteChars(8)
+    .typeString('<span id="back">  Backend </span>')
+    .pauseFor(1500)
+    .deleteChars(8)
+    .typeString('web developper')
+    .stop()
+    .start();
 
 
 

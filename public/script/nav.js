@@ -1,25 +1,12 @@
-import {englishText, toggleLang, lang_elt} from './script.mjs';
+import {englishText, toggleLang, lang_elt} from './export.mjs';
 
 const burger_btn = document.querySelector('.burger-btn');
 const menu_list = document.querySelector('.menu-list');
+const menu_link = menu_list.querySelectorAll('p');
 const menu = document.querySelector('nav');
 let open_menu = false;
 const lang_menu_p = lang_elt.querySelectorAll('p');
 const app = document.getElementById('app');
-const typewriter = new Typewriter(app, {
-    loop: false
-});
-    typewriter.typeString('Junior web developper')
-    .pauseFor(1500)
-    .deleteChars(14)
-    .typeString('<span id="front">Frontend<span>')
-    .deleteChars(8)
-    .typeString('<span id="back">  Backend </span>')
-    .pauseFor(1500)
-    .deleteChars(8)
-    .typeString('web developper')
-    .stop()
-    .start();
 
 
     function disableScroll() {
@@ -70,16 +57,27 @@ const typewriter = new Typewriter(app, {
         if(englishText == true){
             lang_menu_p[0].innerHTML = `English`;
             lang_menu_p[1].innerHTML = `Francais`;
+            // Text menu link
+            menu_link[0].innerHTML = "About";
+            menu_link[1].innerHTML = "Skills";
+            menu_link[2].innerHTML = "Projects";
+            menu_link[3].innerHTML = "Contact";
+
 
         }else{
             lang_menu_p[0].innerHTML = `Francais`;
             lang_menu_p[1].innerHTML = `Anglais`;
+            // Text menu link
+            menu_link[0].innerHTML = "à propos";
+            menu_link[1].innerHTML = "competence";
+            menu_link[2].innerHTML = "projets";
+            menu_link[3].innerHTML = "contact";
         }
     }
 
+    console.log(menu_link);
 
-    langMenu();
-
+    toggleLang(langMenu());
     burger_btn.addEventListener('click',()=>{toggleMenu();})
     menu_list.addEventListener('click',()=>{toggleMenu();});
 
