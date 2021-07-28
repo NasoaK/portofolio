@@ -36,7 +36,7 @@ app.post('/',(req,res)=>{
             to: req.body.email,
             subject:'Salut c\'est Mike voici mon cv ',
             text:'Good to see you again',
-            html:  `<img src=cid:mailtrap style='height:200px; width:600px; object-fit:center'> <a href="https://mknak.herokuapp.com/" target="_blank"> Want to see it again <a/>`,
+            html:  `<img src=cid:mailtrap style='height:200px; width:600px; object-fit:center'> <br> <a href="https://mknak.herokuapp.com/" target="_blank"> Want to see it again <a/>`,
             attachments: [{
                 filename: 'mailBg.jpg',
                path:"public/assets/mail.png",
