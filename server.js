@@ -35,11 +35,11 @@ app.post('/',(req,res)=>{
         const mailOption2 = {
             to: req.body.email,
             subject:'Salut c\'est Mike voici mon cv ',
-            text:'test',
-            html: `<h3>Salut c\'est Mikael</h3> <p>Merci d'etre passé sur mon portofolio, tu peux trouver mon cv ci-joint .</p> <img src=cid:mailtrap style='height:50vw; width:70vh; object-fit:center' >`,
+            text:'Good to see you again',
+            html:  `<img src=cid:mailtrap style='height:200px; width:600px; object-fit:center'> <a href="https://mknak.herokuapp.com/" target="_blank"> Want to see it again <a/>`,
             attachments: [{
                 filename: 'mailBg.jpg',
-               path:"public/assets/mail2.png",
+               path:"public/assets/mail.png",
                 cid: 'mailtrap' 
             },
             {
