@@ -31,50 +31,56 @@ app.post('/',(req,res)=>{
             subject: `Message from ${req.body.email} : ${req.body.subject}`,
             text: req.body.message
         };
-    
-        transporter.sendMail(mailOption, (error, info)=>{
-            if(error){
-                console.log(error);
-                res.send('error');
-            }else{
-                console.log('Email success');
-                res.send('success');
+        
+        const mailOption2 = {
+            to: req.body.email,
+            subject:'Salut c\'est Mike voici mon cv ',
+            text:'test',
+            html: `<h3>Salut c\'est Mikael</h3> <p>Merci d'etre passé sur mon portofolio, tu peux trouver mon cv ci-joint .</p> <img src=cid:mailtrap style='height:50vw; width:70vh; object-fit:center' >`,
+            attachments: [{
+                filename: 'mailBg.jpg',
+               path:"public/assets/mail2.png",
+                cid: 'mailtrap' 
+            },
+            {
+                filename: 'MikaelKombia_Resume.pdf',
+                path: "public/assets/resume.pdf"
+            }]
+        };
+
+        function defaultMail(){
+                transporter.sendMail(mailOption, (error, info)=>{
+                    if(error){
+                        console.log(error);
+                        res.send('error');
+                    }else{
+                        console.log('Email success');
+                        res.send('success');
+                    }   
+                })
             }
-
-        })
-    // Check if you want my resume
-
-        //if(req.body.sendCv === 'true'){
-
-            const mailOption2 = {
-                to: req.body.email,
-                subject:'Salut c\'est Mike voici mon cv ',
-                text:'test',
-                //html:'<div style="background-image:url(cid:mailtrap);width:50vw; height:50vh; color: black; background-position:center;object-fit:cover; align-item: center; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; padding:20px"> <h3>Salut c\'est Mikael</h3> <p>Tu voulais voir mon cv le voici</p></div>',
-                html: "<h3>Salut c\'est Mikael</h3> <p>Merci d'etre passé sur mon portofolio, tu peux trouver mon cv ci-joint .</p> <img src=cid:mailtrap style='height:50vw; width:70vh; object-fit:center' >",
-                attachments: [{
-                    filename: 'mailBg.jpg',
-                   path:"public/assets/mail2.png",
-                    cid: 'mailtrap' 
-                },
-                {
-                    filename: 'MikaelKombia_Resume.pdf',
-                    path: "public/assets/resume.pdf"
-                }]
-            };
-
-            transporter.sendMail(mailOption2, (error, info)=>{
-                if(error){
-                    console.log(error);
-                    res.send('error');
-                }else{
-                    console.log('Email success');
-                    res.send('success');
-                }
-            });
-            console.log('on peut envoyer le cv');
+       
+            function mailCv(){     
+                transporter.sendMail(mailOption2, (error, info)=>{
+                    if(error){
+                        console.log(error);
+                        res.send('error');
+                    }else{
+                        console.log('cv envoyé');
+                        res.send('success');
+                    }
+                });  
+            }
+            
+            // Check if you want my resume
+            if(req.body.sendCv === 'true'){
+                mailCv();
+                defaultMail();
+                
+            }else{
+                defaultMail();
+            }
     
-       //};
 });
 
 app.get('/',(req,res)=>{

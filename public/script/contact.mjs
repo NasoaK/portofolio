@@ -6,7 +6,7 @@ const subject = document.getElementById('subject');
 const message = document.getElementById('form-message');
 export const lazyLoader = document.getElementById('lazyLoader');
 const modal_success = document.querySelector('#modal-success');
-let sendCv ;
+let sendCv = 'false';
 
 // Translate function
 const input = document.querySelectorAll('input');
@@ -31,10 +31,10 @@ export function translate_form(){
 
 
 //checkBox email
-const check = document.getElementById('check');
+const check = document.querySelector('#check');
 
 check.addEventListener('change',()=>{
-    if(this.checked){
+    if(check.checked){
         sendCv = 'true';
     }else{
         sendCv = 'false';
