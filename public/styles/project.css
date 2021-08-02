@@ -90,6 +90,12 @@ transform: translatey(0px);
 opacity: 1;
 }
 
+.card-techno-container{
+
+}
+.card-techno{
+background-color: rgba(128, 128, 128, 0.33);
+}
 
 .card-btn{
   border-radius : 14px;
@@ -104,6 +110,7 @@ opacity: 1;
   color: white;
   z-index: 10;
 }
+
 
 .card-btn:hover{
  /*  background-color:#97fdcc;; */
