@@ -1,8 +1,16 @@
 import {englishText} from './global.mjs';
 const projects = [
+  {
+    name: "weatherApp",
+    techno: "html css Javascript restAPI",
+    image: "https://media-exp1.licdn.com/dms/image/C4D1BAQF8YuxGvAgqZw/company-background_10000/0/1594963208917?e=2159024400&v=beta&t=754ZegPvr7OdCeljpaSpRrCO5OVEeJrGZtlzSccbpvc",
+    link: "",
+    origine: "codingJobs",
+    done: false
+},
     {
         name : "Loopstudio",
-        techno : ["js","html", "css"],
+        techno :"js html css",
         about: "build out, landing page and get it looking as close to the design as possible.",
         about2:"Creation d'un site static pour une entreprise de réalité virtuelle ",
         image : "assets/images/projects/loopstudio.jpg",
@@ -14,7 +22,7 @@ const projects = [
     
     {
         name : "Crowdfund",
-        techno : ["angular",'css'],
+        techno : 'angular css',
         about : "Frontend Mentor challenge, build product page for crowndfunding website and get it looking as close to the design as possible.",
         about2: " Creation de la page produits d'un site de crownfunding",
         image : "assets/images/projects/crowdfund.jpg",
@@ -26,7 +34,7 @@ const projects = [
     
     {
         name : "Card",
-        techno : ["html","css"],
+        techno : "html css",
         image : "https://media-exp1.licdn.com/dms/image/C4D1BAQF8YuxGvAgqZw/company-background_10000/0/1594963208917?e=2159024400&v=beta&t=754ZegPvr7OdCeljpaSpRrCO5OVEeJrGZtlzSccbpvc",
         link : "",
         origine : 'frontendMentor',
@@ -36,7 +44,7 @@ const projects = [
     
     {
         name: "LetzGetJob",
-        techno : ["laravel","Jquery",'css'],
+        techno : 'laravel Jquery css',
         about: "Coding Jobz, final project mise en relation professionel particulier",
         about2: " Project final de la formation Coding jobs, site web de mise en relation professionnel particulier dans les métiers manuels",
         image : "https://media-exp1.licdn.com/dms/image/C4D1BAQF8YuxGvAgqZw/company-background_10000/0/1594963208917?e=2159024400&v=beta&t=754ZegPvr7OdCeljpaSpRrCO5OVEeJrGZtlzSccbpvc",
@@ -46,55 +54,45 @@ const projects = [
     
     {
         name: "WhatsLove",
-        techno: ["unknow"],
+        techno: "unknow",
         image: "https://media-exp1.licdn.com/dms/image/C4D1BAQF8YuxGvAgqZw/company-background_10000/0/1594963208917?e=2159024400&v=beta&t=754ZegPvr7OdCeljpaSpRrCO5OVEeJrGZtlzSccbpvc",
         link: "",
         origine: "codingJobs",
         done: false
-    },
-    {
-        name: "weatherApp",
-        techno: ["html", "css", "Javascript", "restAPI"],
-        image: "https://media-exp1.licdn.com/dms/image/C4D1BAQF8YuxGvAgqZw/company-background_10000/0/1594963208917?e=2159024400&v=beta&t=754ZegPvr7OdCeljpaSpRrCO5OVEeJrGZtlzSccbpvc",
-        link: "",
-        origine: "codingJobs",
-        done: false
-    }];
+    }
+    ];
     
 const container = document.querySelector('.card-container');
 const projectMock = document.querySelector('.card');
+const techno_container = document.querySelector('.card-techno-container');
 
-
-function openLink(e){
-  window.open(e);
-}
 
 for (const project of projects){
-    const project_card = projectMock.cloneNode(true);
+  const project_card = projectMock.cloneNode(true);
+ 
     project_card.querySelector('img').src = project.image;
     project_card.style.overFlow = "hidden";
     project_card.querySelector('.card-title').textContent = project.name;
-    //project_card.querySelector('.card-techno').textContent = project.techno;
-    for( const techno of project.techno){
-     const techno_container = document.querySelector('.card-techno-container');
-     const technoElt = document.createElement('p');
-     technoElt.textContent = techno;
-     technoElt.classList.add('card-techno');
-     techno_container.appendChild(technoElt);
-    }
+    project_card.querySelector('.card-techno').textContent = project.techno;
 
-    /* project.techno.forEach((tech,index)=>{
-      const techno_container = document.querySelector('.card-techno-container');
+    /* var str = project.techno.split(" ");
+    str.map((st)=>{
       const technoElt = document.createElement('p');
-      technoElt.textContent = tech;
+      technoElt.textContent = st;
       technoElt.classList.add('card-techno');
       techno_container.appendChild(technoElt);
     }) */
-    /* card_btn[0].querySelector('a').href = project.link;*/
-  project_card.querySelector('.livebtn').addEventListener('click', (e)=>{
+
+    project_card.querySelector('.livebtn').href = project.link;
+    project_card.querySelector('.codebtn').href = project.code;
+    
+/*  function openLink(e){
+  window.open(e);
+}
+ project_card.querySelector('.livebtn').addEventListener('click', (e)=>{
   openLink(project.link)
-});
-  project_card.querySelector('.codebtn').href= project.code;
+});*/
+
     if(englishText){
       project_card.querySelector('.card-text').textContent = project.about;
     }else{
