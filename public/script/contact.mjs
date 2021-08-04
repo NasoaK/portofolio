@@ -1,27 +1,51 @@
+import {englishText, lang_elt} from './global.mjs';
 const contactForm = document.querySelector('#contact-form');
 const fullName = document.getElementById('name');
 const email = document.getElementById('email');
 const subject = document.getElementById('subject');
 const message = document.getElementById('form-message');
-const lazyLoader_mail = document.getElementById('lazyLoader-mail');
+export const lazyLoader = document.getElementById('lazyLoader');
 const modal_success = document.querySelector('#modal-success');
-let sendCv;
+let sendCv = 'false';
+
+// Translate function
+const input = document.querySelectorAll('input');
+const check_text = contactForm.querySelector('p');
+
+export function translate_form(){
+ if(englishText){
+    input[0].placeholder = "full name";
+    input[1].placeholder = "Your email adress";
+    input[2].placeholder = "subject";
+    check_text.innerHTML = 'Want to receive my resume ?';
+ 
+}else{
+    input[0].placeholder = "Nom complet";
+    input[1].placeholder = "ton adresse email";
+    input[2].placeholder = "sujet";
+    check_text.innerHTML = 'Tu veux recevoir mon cv par email ?';
+ }
+}
+
+
+
+
 //checkBox email
-const check = document.getElementById('check');
+const check = document.querySelector('#check');
 
 check.addEventListener('change',()=>{
-    if(this.checked){
-        sendCv = 'false'
+    if(check.checked){
+        sendCv = 'true';
     }else{
-        sendCv = 'true'
+        sendCv = 'false';
     }
 });
 
 modal_success.addEventListener('click',()=>{
 
 modal_success.style.display = "none";
-lazyLoader_mail.style.opacity = 0.8;
-lazyLoader_mail.style.display = "none";
+lazyLoader.style.opacity = 0.8;
+lazyLoader.style.display = "none";
 });
 
 contactForm.addEventListener('submit', (e)=>{
@@ -34,7 +58,7 @@ contactForm.addEventListener('submit', (e)=>{
         message: message.value,
         sendCv: sendCv
     };
-    lazyLoader_mail.style.display = "flex";
+    lazyLoader.style.display = "flex";
 
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '/');
@@ -46,7 +70,7 @@ contactForm.addEventListener('submit', (e)=>{
         if(xhr.responseText === 'success'){
 
             setTimeout(function(){  
-                lazyLoader_mail.style.opacity = 1;
+                lazyLoader.style.opacity = 1;
             modal_success.style.display = "block";
             fullName.value = '';
             email.value = '';

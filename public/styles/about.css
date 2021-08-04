@@ -99,7 +99,7 @@
         align-items: center;
         transition: 1s;
         left: 50%;
-       
+        flex-direction: column;
     }
 
 
@@ -137,5 +137,11 @@
         font-size: large;
         color: black;
         display: flex;
+    }
+}
+
+@media(max-width:800px){
+    .about-text-box div{
+       padding: 15px;
     }
 }

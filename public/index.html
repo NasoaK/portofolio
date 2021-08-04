@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mikael Kombia portofolio</title>
+    <link rel="icon" href="./assets/favicon3.ico" type="image/png">
+ 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="librairiesJs/Glider.js-master/glider.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -35,7 +37,7 @@
 
 <body>
 <!-- Modal + lazy loader -->
-    <div id="lazyLoader-mail">
+    <div id="lazyLoader">
         <img src="https://assets.materialup.com/uploads/470bbf65-abc7-4f5d-8f67-b076ba891472/preview.gif" alt="">
 
         <div id="modal-success">
@@ -96,7 +98,7 @@
 
     <section id="about">
 
-        <h3>About</h3>
+        <h3>à propos</h3>
 
             <div class="about-container">
                 <!-- <img src="./IMG_3087.JPG"  class="about-img"alt=""> -->
@@ -137,7 +139,7 @@
 
     <section class="cv" id="skills">
         
-        <h3> My toolkit</h3>
+        <h3> Mes outils</h3>
         <div>
             <ul id="skills-list">
                 <li class="skill">
@@ -155,7 +157,7 @@
 
 <section id="project">
 
-        <h3> Projects</h3>
+        <h3> Projets</h3>
         
     <div class="glider-contain">
         <div class="glider card-container">
@@ -164,9 +166,13 @@
                 <div class="card-info-box">
                     <p class="card-title">Lorem ipsum.</h3>
                         <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint tenetur qui odit beatae, quidem fugit voluptatibus, doloremque impedit similique dolore omnis, necessitatibus ipsam .</p>
-                        <p class="card-techno"> Javascript html css</p>
-                        <button class="card-btn livebtn">Live</button>
-                        <button class="card-btn"><a href="" class="codebtn">Code</a></button>
+                        <div class="card-techno-container">
+                            <p class="card-techno"> </p>
+                        </div>
+                        <div class="btn-container">
+                            <button class="card-btn"><a href="" target="_blank" class="livebtn">Live</a></button>
+                            <button class="card-btn"><a href="" target="_blank" class="codebtn">Code</a></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -182,23 +188,19 @@
 
       <section id="contact">
             
-        <h3> Get in touch</h3>
-
-    <!--  <p id="email-perso"> Mikael.kombia@gmail.com</p> -->
-
-
+        <h3> Contact</h3>
     <form method="POST" action="" id="contact-form">
 
         <div class="form-info">
-                <input type="text" id="name" name="name" placeholder="Full name" required>
-                <input type="email" name="" id="email" placeholder="Email" required>
-                <input type="text" id="subject" placeholder="subject" required>
+                <input type="text" id="name" name="name" placeholder="Nom complet" required>
+                <input type="email" name="" id="email" placeholder="Adresse email" required>
+                <input type="text" id="subject" placeholder="Sujet" required>
         </div>
 
         <textarea name="message" id="form-message" cols="auto" rows="10" placeholder="Message" required></textarea>
 
         <input type="checkbox" id="check">
-        <label for="check"><p>Want to receive my cv by email ? </p></label>        
+        <label for="check"><p>Tu veux recevoir mon cv par email ? </p></label>        
       
            
 
@@ -213,9 +215,9 @@
 
       <footer>
         <ul id="social-media">
-            <li> <a href="https://github.com/NasoaK"><img src="assets/GitHub-Mark-Light-64px.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
-            <li> <a href="https://www.linkedin.com/in/mikael-kombia/"><img src="assets/social-media/linkedin.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
-            <li> <a href="https://codepen.io/Nasoa"><img src="assets/social-media/codePen.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
+            <li> <a href="https://github.com/NasoaK" target="_blank"><img src="assets/GitHub-Mark-Light-64px.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
+            <li> <a href="https://www.linkedin.com/in/mikael-kombia/" target="_blank"><img src="assets/social-media/linkedin.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
+            <li> <a href="https://codepen.io/Nasoa" target="_blank"><img src="assets/social-media/codePen.png" alt="" style="width:50px;height:50px" class="social-icon"></a>  </li>
         </ul>
       </footer>
     <!-- particles dom-element-->
@@ -224,7 +226,7 @@
     <!--TODO particle.js CDN-->
 <script type="text/javascript" src="particles.js-master/particles.js"></script>
 <!-- !! particle.js old way with cdn -->
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
  <script id="particle">
 particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#97fdcc"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.4890406785639845,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3.945738208161363,"random":true,"anim":{"enable":false,"speed":2.4362316369040355,"size_min":0,"sync":false}},"line_linked":{"enable":true,"distance":224.4776885211732,"color":"#7acaa4","opacity":0.3286994724774322,"width":0.9620472365193136},"move":{"enable":true,"speed":1.603412060865523,"direction":"top","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":1683.5826639087988,"rotateY":2244.776885211732}}},"interactivity":{"detect_on":"window","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":50,"size":10,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.5},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
  </script>
@@ -247,6 +249,29 @@ particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enabl
 <script id="removeTest" src="script/skills.js"></script>
 <script type="module" src="script/about.js"></script>
 <script type="module" src="script/global.js"></script>
+
+<!-- Smooth scroll safari -->
+
+<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js">
+
+function SmoothVerticalScrolling(e, time, where) {
+    var eTop = e.getBoundingClientRect().top;
+    var eAmt = eTop / 100;
+    var curTime = 0;
+    while (curTime <= time) {
+        window.setTimeout(SVS_B, curTime, eAmt, where);
+        curTime += time / 100;
+    }
+}
+
+function SVS_B(eAmt, where) {
+    if(where == "center" || where == "")
+        window.scrollBy(0, eAmt / 2);
+    if (where == "top")
+        window.scrollBy(0, eAmt);
+}
+</script>
+>>>>>>> V2
 
 </body>
 </html>
