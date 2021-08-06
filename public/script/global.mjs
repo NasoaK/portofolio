@@ -1,5 +1,5 @@
 import {translate_about} from './about.mjs';
-import {translate_menu} from './header.mjs';
+import {translate_menu, animation_translate} from './header.mjs';
 import {translate_form, lazyLoader} from './contact.mjs';
 
 export var englishText = false;
@@ -31,7 +31,9 @@ function toggleLang(){
        translate_menu();
        translate_h3();
        translate_form();
+       animation_translate();
         console.log(englishText);
+
     })
 }
 

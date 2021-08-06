@@ -3,7 +3,7 @@ const skills = [
     {name:"CSS", img:"assets/techno-icon/css.png",img2:"assets/techno-icon/css-2.png"},
     {name:"Javascript", img:"assets/techno-icon/js.png",img2:"assets/techno-icon/js-2.png"},
     {name:"Angular", img:"assets/techno-icon/angular.png",img2:"assets/techno-icon/angular-2.png"},
-    {name:"Jquery", img:"assets/techno-icon/jquery.png",img2:"assets/techno-icon/jquery-2.png"},
+    {name:"Jquery", img:"assets/techno-icon/jquery.png",img2:"assets/techno-icon/jquery-2.svg"},
     {name:"php", img:"assets/techno-icon/php.png",img2:"assets/techno-icon/php-2.png"},
     {name:"responsive", img:"assets/techno-icon/responsive.png",img2:"assets/techno-icon/responsive-2.png"},
     {name:"figma", img:"assets/techno-icon/figma.png",img2:"assets/techno-icon/figma-2.png"},

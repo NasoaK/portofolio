@@ -69,8 +69,8 @@ const typewriter = new Typewriter(app, {
 // langue function
     export function translate_menu(){
         if(englishText == true){
-            lang_menu_p[0].innerHTML = `English`;
-            lang_menu_p[1].innerHTML = `Francais`;
+            lang_menu_p[0].textContent = `English`;
+            lang_menu_p[1].textContent = `Francais`;
             menu_link[0].innerHTML = "about";
             menu_link[1].innerHTML = "skills";
             menu_link[2].innerHTML = "projects";
@@ -78,14 +78,20 @@ const typewriter = new Typewriter(app, {
 
 
         }else{
-            lang_menu_p[0].innerHTML = `Francais`;
-            lang_menu_p[1].innerHTML = `Anglais`;
+            lang_menu_p[0].textContent = `Francais`;
+            lang_menu_p[1].textContent = `Anglais`;
             menu_link[0].innerHTML = "à propos";
             menu_link[1].innerHTML = "competence";
             menu_link[2].innerHTML = "projets";
             menu_link[3].innerHTML = "contact";
         }
     }
+
+    export function animation_translate(){
+
+        setTimeout(()=>{alert('end-effect')},700);
+
+}
 
     burger_btn.addEventListener('click',()=>{toggleMenu();})
     menu_list.addEventListener('click',()=>{toggleMenu();});
