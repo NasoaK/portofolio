@@ -19,8 +19,7 @@ const typewriter = new Typewriter(app, {
     .pauseFor(1500)
     .deleteChars(8)
     .typeString('web developper')
-    .stop()
-    .start();
+    .stop();
 
 
     function disableScroll() {
