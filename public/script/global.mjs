@@ -63,7 +63,7 @@ lazyLoader.style.display = "flex";
 
 setTimeout(()=>{
     lazyLoader.style.display = "none";
-}, 5000)
+}, 1000)
 
 
 

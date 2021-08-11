@@ -10,7 +10,7 @@ const menu_link = menu_list.querySelectorAll('p');
 const typewriter = new Typewriter(app, {
     loop: false
 });
-    typewriter.pauseFor(5000).typeString('Junior web developper')
+    typewriter.pauseFor(1000).typeString('Junior web developper')
     .pauseFor(500)
     .deleteChars(14)
     .typeString('<span id="front">Frontend<span>')
@@ -19,7 +19,9 @@ const typewriter = new Typewriter(app, {
     .pauseFor(1500)
     .deleteChars(8)
     .typeString('web developper')
-    .stop();
+    .stop()
+    .changeCursor(' ')
+    .start();
 
 
     function disableScroll() {
