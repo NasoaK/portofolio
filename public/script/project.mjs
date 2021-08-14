@@ -2,7 +2,7 @@ import {englishText} from './global.mjs';
 const projects = [
   {
     name: "weatherApp",
-    techno: "html css Javascript restAPI",
+    techno:"html css Javascript restAPI" ,
     image: "https://media-exp1.licdn.com/dms/image/C4D1BAQF8YuxGvAgqZw/company-background_10000/0/1594963208917?e=2159024400&v=beta&t=754ZegPvr7OdCeljpaSpRrCO5OVEeJrGZtlzSccbpvc",
     link: "",
     origine: "codingJobs",
@@ -64,24 +64,21 @@ const projects = [
     
 const container = document.querySelector('.card-container');
 const projectMock = document.querySelector('.card');
-const techno_container = document.querySelector('.card-techno-container');
-
 
 for (const project of projects){
   const project_card = projectMock.cloneNode(true);
- 
     project_card.querySelector('img').src = project.image;
     project_card.style.overFlow = "hidden";
     project_card.querySelector('.card-title').textContent = project.name;
-    project_card.querySelector('.card-techno').textContent = project.techno;
+/*     project_card.querySelector('.card-techno').textContent = project.techno; */
 
-    /* var str = project.techno.split(" ");
+    var str = project.techno.split(" ");
     str.map((st)=>{
       const technoElt = document.createElement('p');
       technoElt.textContent = st;
       technoElt.classList.add('card-techno');
-      techno_container.appendChild(technoElt);
-    }) */
+      project_card.querySelector('.card-techno-container').appendChild(technoElt);
+    })
 
     project_card.querySelector('.livebtn').href = project.link;
     project_card.querySelector('.codebtn').href = project.code;

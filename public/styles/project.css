@@ -91,10 +91,16 @@ opacity: 1;
 }
 
 .card-techno-container{
-
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
+
 .card-techno{
 background-color: rgba(128, 128, 128, 0.33);
+width: fit-content;
+padding: 5px;
+margin: 5px;
 }
 
 .card-btn{
@@ -120,6 +126,9 @@ background-color: rgba(128, 128, 128, 0.33);
   transition: 0.3s;
 }
 
+.card-btn a:visited{
+  color: white;
+}
 .card-title{
   font-size: xx-large;
   margin-bottom: 10px;
@@ -128,8 +137,6 @@ background-color: rgba(128, 128, 128, 0.33);
 .card-text{
   margin-bottom: 10px;
 }
-
-
 
 
 @media(max-width:1400px){
