@@ -20,7 +20,8 @@
     box-shadow : 20px 20px 50px rgba(0,0,0,0.5);
     border-top:  2px solid rgba(255, 255, 255, 0.837);
     -webkit-box-shadow: inset 0px 2px 6px 2px #ffffff96; 
-    box-shadow: inset 1px 9px 25px -1px rgba(255,255,255,0.97)
+    box-shadow: inset 1px 9px 25px -1px rgba(255,255,255,0.97);
+max-height: 70vh;
 }
 
 .form-info{
@@ -101,6 +102,13 @@ button{
     font-size:  11px;
     padding-bottom: 3px;
     }
+
+    textarea{
+        height: 30%;
+    }
+    .form-info input{
+        margin-bottom: 13px;
+}
 
 }
 
