@@ -71,7 +71,6 @@ for (const project of projects){
     project_card.style.overFlow = "hidden";
     project_card.querySelector('.card-title').textContent = project.name;
 /*     project_card.querySelector('.card-techno').textContent = project.techno; */
-
     var str = project.techno.split(" ");
     str.map((st)=>{
       const technoElt = document.createElement('p');
