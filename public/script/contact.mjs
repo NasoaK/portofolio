@@ -66,21 +66,28 @@ contactForm.addEventListener('submit', (e)=>{
 
     xhr.onload = function(){
         console.log(xhr.responseText);
-
+        
+        const startTime = performance.now();
         if(xhr.responseText === 'success'){
 
+
+
+
+            
             setTimeout(function(){  
                 lazyLoader.style.opacity = 1;
-            modal_success.style.display = "block";
-            fullName.value = '';
-            email.value = '';
-            subject.value = '';
-            message.value = '';
-            console.log('email send');
+                modal_success.style.display = "block";
+                fullName.value = '';
+                email.value = '';
+                subject.value = '';
+                message.value = '';
+                console.log('email send');
             }, 2000);
         }else{
             alert('something went wrong !')
         }
+        const duration = performance.now() - startTime;
+        console.log(`someMethodIThinkMightBeSlow took ${duration}ms`);
     }
 
     xhr.send(JSON.stringify(formData));
