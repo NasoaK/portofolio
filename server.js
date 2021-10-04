@@ -52,7 +52,8 @@ app.post('/',(req,res)=>{
                 transporter.sendMail(mailOption, (error, info)=>{
                     if(error){
                         console.log(error);
-                        res.send('mail error:', error, 'info : ' ,info);
+                        err = JSON.stringify(error);
+                        res.send('mail error:', err, 'info : ' ,info);
                     }else{
                         console.log('Email success');
                         res.send('success');
@@ -64,7 +65,8 @@ app.post('/',(req,res)=>{
                 transporter.sendMail(mailOption2, (error, info)=>{
                     if(error){
                         console.log(error);
-                        res.send('mail error :', error, 'info : ' ,info);
+                        err = JSON.stringify(error);
+                        res.send('mail error :', err, 'info : ' ,info);
                     }else{
                         console.log('cv envoyé');
                         res.send('success');
