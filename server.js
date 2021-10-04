@@ -62,7 +62,7 @@ app.post('/',(req,res)=>{
             }
        
             function mailCv(){     
-                transporter.sendMail(mailOption2, (error, info)=>{
+              await  transporter.sendMail(mailOption2, (error, info)=>{
                     if(error){
                         console.log(error);
                         err = JSON.stringify(error);
