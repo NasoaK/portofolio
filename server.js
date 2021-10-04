@@ -49,7 +49,7 @@ app.post('/',(req,res)=>{
         };
 
         function defaultMail(){
-                transporter.sendMail(mailOption, (error, info)=>{
+                await transporter.sendMail(mailOption, (error, info)=>{
                     if(error){
                         console.log(error);
                         err = JSON.stringify(error);
