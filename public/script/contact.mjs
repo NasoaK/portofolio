@@ -69,11 +69,6 @@ contactForm.addEventListener('submit', (e)=>{
         
         const startTime = performance.now();
         if(xhr.responseText === 'success'){
-
-
-
-
-            
             setTimeout(function(){  
                 lazyLoader.style.opacity = 1;
                 modal_success.style.display = "block";
@@ -82,9 +77,10 @@ contactForm.addEventListener('submit', (e)=>{
                 subject.value = '';
                 message.value = '';
                 console.log('email send');
-            }, 2000);
+            }, 500);
         }else{
             alert('something went wrong !')
+            console.log(xhr.responseText)
         }
         const duration = performance.now() - startTime;
         console.log(`someMethodIThinkMightBeSlow took ${duration}ms`);
